@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-el: hsl(0, 0%, 100%);
+    --body: hsl(0, 0%, 98%);
+}
+
+/* Body Styles */
+body {
+    background-color: var(--body);
+    color: hsl(200, 15%, 8%);
+    font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
+}
+    
+body.dark {
+    --body: hsl(207, 26%, 17%);
+    color: hsl(0, 0%, 98%);
+    --background-el: hsl(209, 23%, 22%);
+}
+
+body.dark .btn-toggle .fas {
+    display: inline-block;
+}
+
+body.dark .btn-toggle .far {
+    display: none;
+}
+
+
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, 
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+	vertical-align: baseline;
+	font-family: 'Nunito Sans', sans-serif;
+	font-style: inherit;
+	outline: 0;
+	margin: 0;
+	border: 0;
+    }
+
+input, textarea, select { 
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+    }
+    
+ol, ul {
+	list-style: none;
+	}
+/* tables still need cellspacing="0" in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+	}
+/* remove possible quote marks (") from <q> & <blockquote> */
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+	}
+blockquote, q {
+	quotes: "" "";
+	}
+
+header {
+    background-color: var(--background-el);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 30px;
+    position: relative;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    padding: 8px 0;
+}
+
+h3 {
+    padding: 7px 0;
+}
+
+h4 {
+    padding: 6px 0;
+}
+
+p {
+    padding: 5px 0;
+}
+
+
+/* theme button styling */
+
+.btn {
+    background: none;
+    cursor: pointer;
+}
+
+.btn-toggle {
+    background: var(--background-el);
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+    align-items: center;
+    color: inherit;
+    font-size: 16px;
+    border: none;
+}
+
+.btn-toggle .fas {
+    display: none;
+}
+
+/* Input */
+.search {
+    padding: 25px;
+    color: inherit;
+    border: none;
+    border-radius: 4px;
+    background: var(--background-el);
+    min-width: 300px;
+    font-size: 14px;
+    font-family: 'Nunito Sans', sans-serif;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.search::placeholder {
+    color: inherit;
+}
+
+.search:focus {
+    box-shadow: 0 5px 8px rgba(0,0,0,0.10), 0 3px 5px rgba(0,0,0,0.12);
+}
+
+.dropdown {
+    background-color: var(--background-el);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
+    padding: 25px;
+    border-radius: 4px;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.regions {
+    display: none;
+    border-radius: 4px;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 57px;
+    background-color: var(--background-el);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.12);
+    min-width: 76%;
+    z-index: 99;
+}
+
+.regions li:first-child {
+    margin-top: 0;
+}
+
+.regions li {
+    margin: 15px 0;
+}
+
+.dropdown.open ul {
+    display: block;
+}
+
+.dropdown.btn {
+    /* display: none; */
+    font-size: 12px;
+    border: none;
+}
+
+.fa-chevron-down {
+    margin-left: 10px;
+}
+
+/* Country card */
+.country-card {
+    border-radius: 4px;
+	background-color: var(--background-el);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+	cursor: pointer;
+	overflow: hidden;
+	margin: 40px;
+	max-width: 100%;
+	width: 250px;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.country-card img {
+	object-fit: cover;
+	height: 200px;
+	width: 100%;
+}
+
+.country-card:hover {
+    box-shadow: 0 5px 8px rgba(0,0,0,0.10), 0 3px 5px rgba(0,0,0,0.12);
+}
+
+.country-card-body {
+    padding: 30px;
+}
+
+.container.countries {
+    margin-top: -40px;
+    justify-content: center;
+}
+
+/* Modal */
+.modal {
+    background-color: var(--body);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
+
+.modal .container {
+    background-color: var(--background-el);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.modal img {
+	max-width: 300px;
+}
+
+.modal-body {
+	padding: 30px;
+}
+
+.btn-close {
+	background-color: var(--background-el);
+	color: inherit;
+	border: none;
+	cursor: pointer;
+	font-size: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
